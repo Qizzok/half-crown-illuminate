@@ -1,0 +1,64 @@
+html {
+    background: linear-gradient(90deg, rgba(255,255,255,1) 50%, rgba(127, 127, 127, 1) 50%);
+    min-height: 100vh;
+    color: rgba(25, 85, 13, 1);
+}
+
+body {
+    max-width: 80vw;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    margin: 0;
+}
+
+.textbox {
+    border: 3px solid rgba(25, 85, 13, 1);
+    background-color: rgba(242, 212, 191, 1);
+    border-radius: 3px;
+    flex-basis: auto;
+    margin: 10px;
+    padding: 10px;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.wide {
+    flex-basis: 100%;
+}
+
+#content {
+    border: 3px solid rgba(25, 85, 13, 1);
+    width: 100%;
+    aspect-ratio: 4/5;
+    max-height: 70vh;
+    max-width: 56vh;
+}
+
+#controls {
+    gap: 10px;
+    padding: 10px;
+}
+
+button {
+    color: rgba(25, 85, 13, 1);
+    background-color: rgba(242, 212, 191, 1);
+    border-color: rgba(25, 85, 13, 1);
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+button:active {
+    font-style: italic;
+}
+
+pre {
+    margin: 0;
+    white-space: pre-wrap;
+}

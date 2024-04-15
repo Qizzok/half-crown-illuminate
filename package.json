@@ -1,0 +1,30 @@
+{
+  "name": "half-crown-illuminate",
+  "description": "Cooperative vision-based game on a chessboard",
+  "author": "Qizzok",
+  "private": true,
+  "type": "module",
+  "main": "src/client/window.js",
+  "scripts": {
+    "buildclient": "esbuild src/client/entry.js --bundle --outfile=client.js --loader:.frag=text --loader:.vert=text --loader:.svg=dataurl",
+    "buildhost": "esbuild src/server/app.js --bundle --platform=node --outfile=server.js",
+    "build": "npm run buildclient & npm run buildhost",
+    "host": "node ./server.js",
+    "start": "npm run build & npm run play",
+    "play": "electron .",
+    "lint": "eslint ./src",
+    "fix": "eslint ./src --fix"
+  },
+  "dependencies": {
+    "@fastify/helmet": "^11.1.1",
+    "@fastify/websocket": "^8.3.1",
+    "electron": "^28.1.1",
+    "esbuild": "^0.19.11",
+    "fastify": "^4.25.2",
+    "gl-matrix": "^3.4.3"
+  },
+  "devDependencies": {
+    "@stylistic/eslint-plugin": "^1.6.3",
+    "eslint": "^8.57.0"
+  }
+}

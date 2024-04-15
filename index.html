@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!-- Written for the April 2024 issue of Salad Magazine at https://zine.kalechips.net/ -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Half-Crown: Illuminate</title>
+        <link rel="stylesheet" href="./style.css"/>
+        <link rel="icon" href="./favicon.ico"/>
+    </head>
+    <body>
+        <main class="flex">
+            <header class="textbox">
+                <h1>Half-Crown: Illuminate</h1>
+            </header>
+            <div class="wide flex">
+                <canvas id="content" tabindex="0"></canvas>
+            </div>
+            <div class="wide flex">
+                <span id="status" class="textbox"></span>
+            </div>
+            <div id="controls" class="wide flex">
+                <button id="firstTurn">Jump to Beginning</button>
+                <button id="prevRound">Show Prev. Round</button>
+                <button id="prevTurn">Show Prev. Turn</button>
+                <button id="nextTurn">Show Next Turn</button>
+                <button id="nextRound">Show Next Round</button>
+                <button id="lastTurn">Jump to Present</button>
+                <button id="newGame">New Game</button>
+                <label class="textbox"><input id="blindfold" type="checkbox" class="wide" checked>Turn Blindfold (removed with any input)</label>
+            </div>
+            <script src="./client.js" ></script>
+            <noscript>This content requires Javascript. Sorry!</noscript>
+            <details class="wide textbox">
+                <summary>Description and Instructions</summary>
+                <div>This is a cooperative web game for two people, played locally in turns. It requires Javascript and a mouse, keyboard, or touch input to play.</div>
+                <div>The game is played on an expanded (8 wide by 10 high) chessboard with one player controlling white pieces and the other player controlling black pieces. The pieces are arranged and move by the rules of chess. Both players have fog of war obscuring the entire board except for spaces containing their own pieces and spaces their teammate's pieces could move to.</div>
+                <div>The objective of the game is mutual survival. Neutral pieces will spawn in empty spaces, appearing as blue and invisible to your teammate until revealed. You cannot capture them or be captured by them, but your teammate can. Neutral pieces your opponent reveals that you may capture and be captured by appear in red.</div>
+                <div>A move along an obscured path will be interrupted by unseen pieces, stopping without capturing, but you can capture an unseen piece by moving onto its space. You can also take your teammate's pieces but this offers no advantage. A 3-turn move history is shown in light red while the spaces are visible, even if they were not when the move was made.</div>
+                <div>Consider choices carefully. Identify targets for your teammate and defend your pieces from the threats they reveal. The game ends when either king is captured.</div>
+            </details>
+        </main>
+        <footer class="textbox">
+            Source code available on <a href="https://github.com/qizzok/half-crown-illuminate">Github</a>. Mirroring/modification is permitted and encouraged.
+            <details>
+                <summary>Read full license information</summary>
+                <pre>
+Chess piece SVG by jurgenwesterhof (adapted from work of Cburnett) - https://commons.wikimedia.org/wiki/Template:SVG_chess_pieces, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=35634436
+
+Javascript gl-matrix library - https://github.com/toji/gl-matrix - used under MIT license, Copyright (c) 2015-2021, Brandon Jones, Colin MacKenzie IV.
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+All other content is open source and Unlicensed at https://github.com/qizzok/half-crown-illuminate. Gratefully created on the NPM platform using eslint and esbuild.</pre>
+            </details>
+        </footer>
+    </body>
+</html>
